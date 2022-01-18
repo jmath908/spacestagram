@@ -7,21 +7,23 @@ import Button from '@mui/material/Button';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import Typography from '@mui/material/Typography';
-export default function SpaceCard() {
+const  SpaceCard = ({apod}) => {
+  
     return (
+      
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
             component="img"
             height="140"
-            image="/"
+            image={apod.hdurl}
             alt=""
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Description
+              {apod.explanation}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Date taken
+              {apod.date}
             </Typography>
           </CardContent>
           <CardActions>
@@ -30,3 +32,5 @@ export default function SpaceCard() {
         </Card>
       );
 }
+
+export default SpaceCard;
