@@ -34,9 +34,9 @@ const  SpaceCard = ({apod}) => {
       </CardContent>
       
       {isLiked ?
-        <FavoriteIcon sx={{color: "Red"}} fontSize="large" onClick={handleClick}/>
+        <FavoriteIcon  sx={{color: "Red"}} fontSize="large" onClick={handleClick}/>
         :
-        <FavoriteBorderIcon sx={{color: "black"}} fontSize="large" onClick={handleClick}/>
+        <FavoriteBorderIcon  sx={{color: "black"}} fontSize="large" onClick={handleClick}/>
         }
       </Card>
       );

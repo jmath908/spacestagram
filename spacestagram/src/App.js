@@ -26,13 +26,19 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-      Spacestagram
+      <header className="App-header" >
+      {loading ? 
+        <h1 style={{textAlign: "center", marginTop: "2rem"}}>Taking you to outer space!</h1>
+      :<>
+      <h1>Spacestagram</h1>
+      <h3>from NASA's APOD</h3>
             <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
               {apods.map((apod, index) => (
                 <SpaceCard apod = {apod} />
               ))}
             </div>
+            </>
+}
     </header>
     </div>
   );
