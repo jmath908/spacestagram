@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import SpaceCard from './components/SpaceCard'
 import React, { useState, useEffect } from "react"
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import HttpClient from "./HttpClient"
 
 function App() {
@@ -26,11 +28,11 @@ function App() {
     <div className="App">
       <header className="App-header">
       Spacestagram
-      <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
-        {apods.map((apod, index) => (
-          <SpaceCard apod = {apod} />
-        ))}
-      </div>      
+            <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+              {apods.map((apod, index) => (
+                <SpaceCard apod = {apod} />
+              ))}
+            </div>
     </header>
     </div>
   );
